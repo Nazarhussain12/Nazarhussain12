@@ -1,0 +1,459 @@
+html {
+    scroll-behavior: smooth;
+  }
+  .hidden {
+    display: none !important;
+  }
+  
+    .movie-slider {
+    margin: 20px 0;
+  }
+  
+  .movie-slider div {
+    margin-right: 10px;
+    text-align: center;
+  }
+  
+  .movie-title {
+    color: white;
+    font-size: 16px;
+    margin-top: 8px; 
+  }
+  
+  .slick-slide img {
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    transition: transform .2s;
+  
+  }
+  
+  .slick-slide:hover img {
+    transform: scale(1.1);
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    color: rgb(0, 0, 0,);
+    transform: scale(1.2);
+    
+  }
+  .movie-slider img {
+    height: 350px; /* or any other fixed height */
+    width: 100%; /* this will make the width responsive to the container size */
+    object-fit: cover; /* this will make sure that images cover the area nicely */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Fix for the slick slider arrows overlapping */
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+     /* Adjust the size as needed */
+    color: rgb(249, 249, 249); /* Change the color as needed */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    z-index: 2; /* Ensure they are above the images */
+    transform: translateY(-50%);
+    font-size: px; /* Smaller font size */
+    transform: scale(1.8); 
+    
+  }
+  
+  .slick-prev {
+    left: 10px; /* Adjust distance from the left edge */
+  }
+  
+  .slick-next {
+    right: 25px; /* Adjust distance from the right edge */
+  }
+  .hero-image {
+    position: relative;
+    height: 100vh; /* Adjust the height as necessary, using vh for viewport height */
+    overflow: hidden;
+    /* Hide the overflow to maintain the aspect ratio of the video */
+  }
+  .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logo {
+    height: 100px; 
+    width: 150px;/* Adjust as needed */
+  }
+  .logo:hover{
+    transform: scale(1.2);
+  }
+  
+  .menu-right {
+    display: flex;
+    align-items: center;
+  }
+  .search-button:hover{
+    transform: scale(1.1);
+  }
+  .search-button {
+    /* Style your search button */
+    margin-right: 20px; 
+    background: #fafafa;
+    border: 0;
+    border-radius: 40px;
+    outline: 0;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 20px 10px 40px;
+    background-image: url('icons8-search.svg'); /* Path to your icon */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust as needed */
+    background-size: 35px 35px; /* Spacing between search and menu */
+  }
+  
+  .three-dot-menu {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Changes the cursor on hover */
+    padding: 8px; /* Adds some padding around the icon for easier clicking */
+    border-radius: 50%; /* Optional: makes the button circular */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  .three-dot-menu:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.2); /* Changes background color on hover */
+  }
+  
+  .three-dot-menu button {
+    background: none;
+    border: none;
+    color: white; /* Set the color of the dots */
+    font-size: 24px; /* Adjust the size of the dots */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px; /* Ensures the button has a fixed size */
+    width: 24px;
+  }
+  
+  /* Hide the default browser styling */
+  .three-dot-menu button:focus {
+    outline: none;
+  }
+  
+  /* Menu content styling */
+  .three-dot-menu .menu-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px; /* Optional: rounded corners for the dropdown */
+  }
+  
+  .three-dot-menu .menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  .three-dot-menu .menu-content a:hover {
+    background-color: #757575;
+    color: white;
+  }
+  
+  
+  .three-dot-menu:hover .menu-content {
+    display: block;
+  }
+  
+  #heroVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover; /* This will ensure that your video covers the entire div */
+    z-index: -1; /* Make sure the video stays in the background */
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    z-index: 0; /* Between the video and the text */
+  }
+  
+  .hero-text {
+   
+    position: absolute;
+    top: 16%; /* Center vertically */
+    left: 20%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to true center */
+    color: rgb(249, 249, 249);
+    z-index: 1; /* Ensure text is above the video */
+    text-align: center;
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+  .hero-image {
+    /* ... existing styles ... */
+    position: relative; /* Ensure the parent is positioned relatively */
+  }
+  .is-visible {
+    animation: fadeInUp 0.9s ease-out forwards;
+  }
+  #scrollButton {
+    margin-top: 1px; /* Space above the button */
+    padding: 10px 20px;
+    background-color: #db0001; /* Example color */
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 25px;
+    font-family:monospace;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+  }
+  
+  #scrollButton:hover {
+    
+    background-color: #a30000;
+     /* Darker shade on hover */
+  }
+  
+  
+  
+  .search-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+  }
+  
+  .search-input {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50px;
+    border: none;
+  }
+  .row
+  {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 50px 0;
+  
+  }.text_col{
+      flex-basis: 50%;
+      margin-bottom: 20px;
+  }
+  
+  .footer{
+      padding: 50px 15% 10px;
+      border-top: 6px solid #333;
+      color: #777;
+      
+  }
+  .footer h2{
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+  
+  }
+  .footer .col{
+      flex-basis: 25%;
+      flex-grow: 1;
+      margin-bottom: 20px;
+  }
+  .footer .col a{
+      display: block;
+      text-decoration: none;
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 10px;
+  
+  }
+  .footer .row{
+      align-items: flex-start;
+      padding: 10px 0;
+  }
+  .footer h3{
+      text-decoration: none;
+  }
+
+
+  /* Existing CSS */
+/* Add new styles below */
+
+/* Smooth Scroll */
+
+/* Add more styles as needed */
+
+
+
+
+
+
+/* Rating Section Styles */
+.rating-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.stars {
+  display: inline-block;
+}
+
+.star {
+  cursor: pointer;
+  font-size: 2em;
+  color: #ddd;  /* Golden color */
+}
+.star.rated {
+  color: #ffd700; /* Golden color when rated */
+}
+/* Comments Section Styles */
+.comments-section {
+  color: #fff;
+  margin-top: 20px;
+  background: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #222;
+  color: #fff;
+}
+
+.comment-form button {
+  padding: 10px 20px;
+  background-color: #ca1919;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  margin-top: 10px;
+}
+
+.comment-form button:hover {
+  background-color: #f90000;
+  transform: scale(1.1);
+}
+
+.comment {
+  padding: 10px;
+  background-color: #222;
+  margin-top: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.comment .user-image {
+  width: 50px;
+  height: 50px;
+  background: url('./movies/dp.jpg') center/cover no-repeat;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment .username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.comment .comment-text {
+  flex: 1;
+}
+
+#comments-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Scrollbar styles */
+#comments-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+#comments-list::-webkit-scrollbar-track {
+  background: #444;
+}
+
+#comments-list::-webkit-scrollbar-thumb {
+  background: #666;
+}
+.delete-comment {
+  background: url('./movies/delete.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  width: 25px; /* Adjust as needed */
+  height: 25px; /* Adjust as needed */
+  padding: 0;
+  margin-left: 10px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.delete-comment:hover {
+  opacity: 1;
+transform: scale(1.2);
+
+}

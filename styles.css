@@ -1,0 +1,539 @@
+/* Reset some default styles for the HTML and body */
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box;
+} 
+body {
+    background-color: #000;
+    
+    color: #fff;
+    
+}
+/* Modal (background) */
+/* The Modal (background) */
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fallback for browsers that don't support blur */
+    backdrop-filter: blur(10px); /* This will blur the background */
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 40px;
+    border-radius: 10px;
+    width: 35%;
+    height: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: animatetop 0.5s ease-in-out;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {transform: translateY(-200px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Input fields */
+.modal-content input[type=text], .modal-content input[type=email], .modal-content input[type=password] {
+    width: calc(100% - 40px); /* Full width minus padding */
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.modal-content input[type=text]:focus, .modal-content input[type=email]:focus, .modal-content input[type=password]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+/* Initial state of the elements */
+/* Keyframes for the fade-in-up effect */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Initial state of the elements */
+  .head1, .head2, .h3 , .h4, .h5, .h6, .h7,.h8 {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  
+  /* State of the elements when they are visible */
+  .is-visible {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .signup1:hover{
+    transform: scale(1.1);
+  }
+/* Set a style for all buttons */
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 5px;
+    margin: 10px 0;
+    position: relative;
+    border: none;
+    margin-left: 90px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45%;
+    transition: background-color 0.3s;
+}
+.getstart:hover{
+transform: scale(1.2);
+cursor: pointer;
+background-color: #4CAF50;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(bg3.png);
+    background-size: cover;
+    background-position: center;
+    padding: 8px 3%;
+    position: relative;
+}
+.navbar{
+    
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding:10px 0;
+}
+.navbar button{
+    border-radius: 50px ;
+    border: 0;
+    outline: 0;
+    background-color: red;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    padding:10px 35px ;
+    margin-left: 10px;
+}
+.logo{
+    width: 170px;
+    cursor: pointer;
+}
+
+.navbar .lang{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    
+    padding: 10px 6px;
+}
+
+.lang img{
+width: 10px;
+
+margin-left:10px ;
+
+}
+.lang img:first-child {
+    margin-right: 9px; /* Add some space between the flag and "English" */
+}
+
+.lang img:last-child {
+    margin-left: 15px; /* Add some space between "English" and the down arrow */
+}
+
+/* Adjust the button's text color */
+.lang {
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+}
+.lang-dropdown {
+    
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #050505;
+    border: 1px solid #030303;
+    z-index: 1;
+}
+h3{
+    font-size: small;
+}
+.lang:hover .lang-dropdown, .lang:focus-within .lang-dropdown {
+    display: block;
+    
+}
+
+.lang-dropdown-item {
+    padding: 10px 30px ;
+    
+}
+.content{
+    
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.signup{
+    background: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.signup input{
+    flex: 1;
+    
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 30px;
+    
+}
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+.row
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+
+}
+.text_col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img_col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img_col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.features h2{
+    
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    
+}
+
+
+
+
+
+
+
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+    
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer h3{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ... Existing CSS ... */
+
+/* Subscription Section Styles */
+/* Subscription Section Styles */
+.subscription-section {
+    text-align: center;
+    padding: 50px 0;
+    background: #000000;
+    color: #060505;
+    transition: background-color 0.5s ease;
+}
+
+.subscription-title {
+    color: #fefefe;
+    font-size: 32px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.subscription-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Wrap items in smaller screens */
+}
+
+.subscription-option,.subscription-option2 {
+    border: 2px solid #e0e0e0; 
+    background: rgba(36, 36, 36, 0.26);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #ccc;
+    border-radius: 10px;
+    width: 250px;
+    height: 400px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space evenly */
+    align-items: center; /* Aligns items horizontally in the center */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.subscription-option2 {
+    border: 2px solid #e0e0e0; 
+    background: rgba(36, 36, 36, 0.26);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #ccc;
+    border-radius: 10px;
+    width: 290px;
+    height: 450px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space evenly */
+    align-items: center; /* Aligns items horizontally in the center */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.a{
+    text-decoration: none;
+}
+
+.subscription-option:hover,.subscription-option2:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.26);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.subscription-option  h3,.subscription-option2  h3 {
+    font-size: 24px;
+    color: #db0001;
+    margin-bottom: 10px;
+    margin-top: 0; /* Remove top margin for title */
+    text-align: center; 
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subscribe-button {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%; /* Full width */
+}
+
+.subscribe-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px); /* Slight move up */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .subscription-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .subscription-option,.subscription-option2 {
+        width: 80%; /* Adjust width for smaller screens */
+        margin: 0 auto; /* Center align */
+    }
+}
+
+/* Signup Guide Section Styles */
+/* Signup Guide Section Styles */
+.signup-guide {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 5%;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.guide-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.guide-steps {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Responsiveness for smaller screens */
+}
+
+.step {
+    width: 200px;
+    animation: scaleUp 0.8s ease-in-out;
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.step img {
+    width: 100%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.step:hover img {
+    transform: scale(1.9); /* Slightly scale up on hover */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .guide-steps {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .step {
+        width: 80%; /* Adjust width for smaller screens */
+        margin: 0 auto; /* Center align */
+    }
+}
+
+/* ... Rest of your CSS ... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
